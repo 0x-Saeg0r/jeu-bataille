@@ -21,18 +21,21 @@ class Joueur:
     
     # Getter pour le nombre de cartes du joueur
     def getNbCartes(self):
-        return len(self.main)
+        return self.nbCartes
     
     # Méthode pour jouer une carte, retourne la dernière carte du jeu et la supprime de la main du joueur
     def jouerCarte(self):
         if len(self.main) == 0:
             return None
         else:
-            return self.main.pop(-1)
+            value = self.main.pop(-1)
+            self.nbCartes = len(self.main)
+            return value
     
     # Méthode pour insérer une carte dans la main du joueur, au début de sa main
     def insererMain(self, carte):
         self.main.insert(0, carte)
+        self.nbCartes = len(self.main)
     
     # Méthode pour afficher la main du joueur
     def montrerMain(self):
