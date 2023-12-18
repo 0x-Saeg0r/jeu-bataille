@@ -48,6 +48,8 @@ class Carte:
         """Méthode permettant de récupérer la valeur de la carte"""
         return self.valeur
 
+    # Méthode permettant de comparer la valeur de la carte actuelle avec celle d'une autre carte, 
+    # retourne True si la valeur de la carte actuelle est supérieure à celle de la carte passée en paramètre, False sinon
     def estSuperieureA(self, carte):
         """Méthode permettant de comparer la valeur de la carte actuelle avec celle d'une autre carte
         carte : Carte, carte à comparer"""
@@ -56,6 +58,8 @@ class Carte:
         else:
             return False
 
+    # Méthode permettant de comparer la valeur de la carte actuelle avec celle d'une autre carte, 
+    # retourne True si la valeur de la carte actuelle est inférieure à celle de la carte passée en paramètre, False sinon
     def estInferieureA(self, carte):
         """Méthode permettant de comparer la valeur de la carte actuelle avec celle d'une autre carte
         carte : Carte, carte à comparer"""
@@ -64,7 +68,7 @@ class Carte:
         else:
             return False
 
-
+# Définition de la fonction testCarte
 def testCarte():
     """Fonction permettant de tester la classe Carte"""
     valetCoeur = Carte('Valet', 'COEUR')  # Création d'une carte
@@ -80,3 +84,5 @@ def testCarte():
     print("Nouvelle valeur : ", valetCoeur.getValeur())
     # Création d'une carte avec des valeurs incorrectes (pour tester l'exception)
     dameCarreau = Carte('DAAAme', 'Caroooot')
+
+testCarte()

@@ -17,12 +17,14 @@ class JeuCartes:
 
     # Définition des méthodes d'instances de la classe JeuCartes
 
+    # Getter pour le nombre de cartes dans le jeu
     # Méthode qui retourne le nombre de cartes dans le jeu
     def getTailleJeu(self):
         """ Fonction qui retourne le nombre de cartes dans le jeu
         Valeur retournée de type int"""
         return self.nbCartes
 
+    # Setter pour le nombre de cartes dans le jeu
     # Méthode qui crée la liste des cartes du jeu
     def creerJeu(self):
         """Crée la liste des cartes de l'attribut self.jeu"""
@@ -39,6 +41,7 @@ class JeuCartes:
         # Retourne la liste des cartes créées
         return self.jeu
 
+    # Getter pour la liste des cartes du jeu
     # Méthode qui retourne la liste des cartes du jeu
     def getJeu(self):
         """ Renvoie la liste des cartes correspondant à l'attribut self.jeu
@@ -111,3 +114,5 @@ def testJeuCartes():
         print("\n")
     # Distribution de 10 cartes à 6 joueurs
     distribution_6j_10c = jeu52.distribuerJeu(6, 10)
+
+testJeuCartes()
